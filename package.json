@@ -4,9 +4,10 @@
   "description": "sistema gerenciador de vendas",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-
+    "test": "jest",
+    "start": "node src/server.js",
+    "lint": "eslint app.js src/** test/** --fix",
+    "secure-mode": "jest --watch --verbose=false"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,17 @@
   },
   "homepage": "https://github.com/wsy152/sistemassgv#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "1.18.3",
+    "consign": "0.1.6",
+    "express": "4.16.4",
+    "knex": "^0.20.13",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "23.6.0",
+    "supertest": "3.3.0"
   }
 }
